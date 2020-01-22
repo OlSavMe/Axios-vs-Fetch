@@ -5,16 +5,16 @@ import Button from "@material-ui/core/Button";
 
 import Axios from "axios";
 
-export default function Reqres() {
+export default function Put() {
   let [stat, setStat] = React.useState();
 
-  const postUser = async () => {
+  const putUser = async () => {
     const params = {
-      first_name: "Olga",
-      last_name: "Sav"
+      first_name: "Updated name",
+      last_name: "Updated last name"
     };
 
-    await Axios.post("https://reqres.in/api/users", params)
+    await Axios.put("https://reqres.in/api/users", params)
       .then(function(response) {
         console.log(response.status);
         setStat(response.status);
@@ -24,7 +24,7 @@ export default function Reqres() {
       });
   };
 
-  postUser();
+  putUser();
 
   return (
     <div>
@@ -33,7 +33,7 @@ export default function Reqres() {
           BACK
         </Link>
       </Button>
-      <h1>Axios POST</h1>
+      <h1>Axios PUT</h1>
       <div>Status: {stat}</div>
     </div>
   );

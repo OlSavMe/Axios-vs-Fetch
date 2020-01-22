@@ -22,6 +22,11 @@ export default function MainPage(props) {
           REQ
         </Link>
       </Button>
+      <Button>
+        <Link component={RouterLink} to="/put">
+          PUT
+        </Link>
+      </Button>
     </div>
   );
 }
