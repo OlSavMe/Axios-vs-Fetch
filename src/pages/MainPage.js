@@ -17,6 +17,11 @@ export default function MainPage(props) {
           Fetch
         </Link>
       </Button>
+      <Button>
+        <Link component={RouterLink} to="/req">
+          REQ
+        </Link>
+      </Button>
     </div>
   );
 }
