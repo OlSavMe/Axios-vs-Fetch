@@ -11,7 +11,8 @@ export default function Put() {
   const putUser = async () => {
     const params = {
       first_name: "Updated name",
-      last_name: "Updated last name"
+      last_name: "Updated last name",
+      email: "updated@gmail.com"
     };
 
     await Axios.put("https://reqres.in/api/users", params)

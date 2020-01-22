@@ -1,5 +1,9 @@
-import React, { useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import React, {
+  useEffect
+} from "react";
+import {
+  Link as RouterLink
+} from "react-router-dom";
 import Link from "@material-ui/core/Link";
 import Button from "@material-ui/core/Button";
 
@@ -28,20 +32,35 @@ export default function AxiosPage() {
     fetchWeath(); // eslint-disable-next-line
   }, []);
 
-  return (
-    <div>
-      <Button>
-        <Link component={RouterLink} to="/">
-          BACK
-        </Link>
-      </Button>
-      <h1>Axios GET</h1>
-      <h1>Weather in {city}</h1>
-      <div>Temperature: {temp} Celsius</div>
-      <div>Weather: {weath}</div>
-      <div>
-        <img src={`https://openweathermap.org/img/w/${img}.png`}></img>
-      </div>
-    </div>
+  return ( <
+    div >
+    <
+    Button >
+    <
+    Link component = {
+      RouterLink
+    }
+    to = "/" >
+    BACK <
+    /Link> <
+    /Button> <
+    h1 > Axios GET < /h1> <
+    h1 > Weather in {
+      city
+    } < /h1> <
+    div > Temperature: {
+      temp
+    }
+    Celsius < /div> <
+    div > Weather: {
+      weath
+    } < /div> <
+    div >
+    <
+    img src = {
+      `https://openweathermap.org/img/w/${img}.png`
+    } > < /img> <
+    /div> <
+    /div>
   );
 }
