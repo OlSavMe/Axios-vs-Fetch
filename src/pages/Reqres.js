@@ -40,22 +40,15 @@ export default function Reqres() {
 
   getUser();
 
-  return ( <
-    div >
-    <
-    Button >
-    <
-    Link component = {
-      RouterLink
-    }
-    to = "/" >
-    BACK <
-    /Link> <
-    /Button> <
-    h1 > Axios POST < /h1> <
-    div > Status: {
-      stat
-    } < /div> <
-    /div>
+  return (
+    <div>
+      <Button>
+        <Link component={RouterLink} to="/">
+          BACK
+        </Link>
+      </Button>
+      <h1>Axios POST</h1>
+      <div>Status: {stat}</div>
+    </div>
   );
 }
